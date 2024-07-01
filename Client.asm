@@ -38,7 +38,6 @@ send_loop:
     mov     rdx, buffer_size           
     syscall
 
-    ; message server
     mov     rax, 64                   
     mov     rdi, ebx                   
     lea     rsi, [buffer]             
@@ -46,5 +45,5 @@ send_loop:
     mov     r10, 0                     
     syscall
 
-    ; Repeat send 
+
     jmp     send_loop
