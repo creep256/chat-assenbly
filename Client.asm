@@ -12,7 +12,6 @@ section .text
     global _start
 
 _start:
-    ; socket
     mov     rax, 41                    
     mov     rdi, 2                      
     mov     rsi, 1                      
