@@ -51,12 +51,10 @@ accept_loop:
     mov     rdx, buffer_size        
     syscall
 
-    ; Print message
     mov     rax, 1                  
     mov     rdi, 1                  
     lea     rsi, [buffer]           
     mov     rdx, buffer_size        
     syscall
 
-    ; Repeat  loop
     jmp     accept_loop
