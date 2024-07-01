@@ -26,14 +26,12 @@ _start:
     mov     dword [server_addr + 4], eax
     mov     qword [server_addr + 8], 0  
 
-    ;server connect
     mov     rax, 42                   
     mov     rdi, ebx                 
     lea     rsi, [server_addr]         
     mov     rdx, 16                    
     syscall
 
-    ;  messages loop
 send_loop:
     mov     rax, 0                     
     mov     rdi, 0                     
