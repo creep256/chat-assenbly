@@ -13,7 +13,6 @@ section .text
     global _start
 
 _start:
-    ; Create socket
     mov     rax, 41               
     mov     rdi, 2                 
     mov     rsi, 1                 
@@ -26,7 +25,6 @@ _start:
     mov     dword [client_addr + 4], 0 
     mov     qword [client_addr + 8], 0 
 
-    ; Bind socket
     mov     rax, 49                 
     mov     rdi, ebx              
     lea     rsi, [client_addr]     
